@@ -26,5 +26,5 @@ document.getElementById('christmasForm').addEventListener('submit', function(eve
             alert('Failed to send your wishlist. Please try again.');
             console.log('Failed to send email:', error);
         });
-    }, 10000); // 10-second delay
+    }, 3000); // 3-second delay
 });

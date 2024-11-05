@@ -13,6 +13,7 @@ html, body {
 }
 
 .wrapper {
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -87,6 +88,7 @@ html, body {
     align-items: center;
     text-align: center;
     margin-top: auto; /* Pushes elf to the bottom */
+    position: relative;
 }
 
 .elf img {
@@ -97,6 +99,7 @@ html, body {
 /* Speech bubble styling */
 .speech-bubble {
     display: none;
+    position: absolute;
     margin-top: 10px;
     background-color: #fff;
     border: 2px solid #d43f3a;
@@ -127,6 +130,11 @@ html, body {
         gap: 0px;
         justify-content: flex-start;
         width: 100%;
+    }
+
+    .speech-bubble {
+        top: -5px; /* Adjust this value as needed to align it above the penguin */
+        left: 5px;
     }
 
     .envelope {
