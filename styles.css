@@ -1,4 +1,4 @@
-body {
+html, body {
     margin: 0;
     height: 100vh;
     background-image: url('images/background.webp'); /* Replace with your image path */
@@ -9,6 +9,7 @@ body {
     justify-content: center;
     align-items: center;
     font-family: Arial, sans-serif;
+    overflow: hidden;
 }
 
 .wrapper {
@@ -125,12 +126,12 @@ body {
         padding: 10px;
         gap: 0px;
         justify-content: center;
+        width: 100%;
     }
 
     .envelope {
         margin-bottom: 30px;
-        width: 350px;
-
+        width: auto;
     }
 
     .elf {
@@ -138,7 +139,7 @@ body {
     }
 
     .elf img {
-        width: 280px;
+        width: 90%;
     }
 }
 
