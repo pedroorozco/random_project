@@ -1,0 +1,163 @@
+body {
+    margin: 0;
+    height: 100vh;
+    background-image: url('images/background.webp'); /* Replace with your image path */
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh;
+    gap: 15px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.envelope {
+    background-color: #fffdf9;
+    border: 2px solid #d43f3a;
+    border-radius: 8px;
+    width: 300px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    margin-bottom: auto; /* Pushes envelope up */
+}
+
+.envelope h2 {
+    font-family: 'Dancing Script', cursive;
+    color: #d43f3a;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.envelope form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.envelope label {
+    font-weight: bold;
+    color: #333;
+}
+
+.envelope input[type="text"],
+.envelope textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #d43f3a;
+    border-radius: 4px;
+    font-size: 1em;
+}
+
+.envelope textarea {
+    height: 100px;
+    resize: none;
+}
+
+.envelope button {
+    background-color: #d43f3a;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 10px;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+.envelope button:hover {
+    background-color: #b7352e;
+}
+
+/* Elf (penguin) styling */
+.elf {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: auto; /* Pushes elf to the bottom */
+}
+
+.elf img {
+    width: 40%;
+    height: auto;
+}
+
+/* Speech bubble styling */
+.speech-bubble {
+    display: none;
+    margin-top: 10px;
+    background-color: #fff;
+    border: 2px solid #d43f3a;
+    border-radius: 10px;
+    padding: 10px;
+    width: 180px;
+    text-align: center;
+    font-size: 0.9em;
+    color: #333;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.speech-bubble::after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 10px;
+    border-style: solid;
+    border-color: #fff transparent transparent transparent;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 500px) {
+    .wrapper {
+        padding: 10px;
+        gap: 0px;
+        justify-content: center;
+    }
+
+    .envelope {
+        margin-bottom: 30px;
+        width: 350px;
+
+    }
+
+    .elf {
+        margin-top: 10px;
+    }
+
+    .elf img {
+        width: 280px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .envelope {
+        width: 400px;
+    }
+
+    .elf img {
+        width: 30%;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .envelope {
+        width: 450px;
+    }
+
+    .elf img {
+        width: 25%;
+    }
+}
